@@ -1,87 +1,98 @@
-# Trader Behavior vs Market Sentiment Analysis
+# Hyperliquid Trader Behavior vs Market Sentiment Analysis
 
-## Overview
+## Objective
 
-This project analyzes how trader performance and behavior change under different market sentiment conditions using a Fear & Greed Index dataset combined with trading activity data.
+The goal of this project is to analyze how **market sentiment (Fear vs Greed)** relates to **trader behavior and performance** on the Hyperliquid platform.
+By combining sentiment data with trading activity, the analysis aims to uncover patterns that can inform smarter trading decisions and risk management strategies.
+
+---
+
+## Datasets
+
+### 1. Fear & Greed Index
+
+Provides a daily sentiment score (0–100) representing overall market psychology.
+The score is categorized into:
+
+* Fear (0–40)
+* Neutral (40–60)
+* Greed (60–100)
+
+### 2. Historical Trading Data
+
+Contains trading activity at the daily level, including metrics such as:
+
+* Date
+* Trading activity indicators
+* Performance-related fields (e.g., PnL if available)
+* Risk metrics (e.g., leverage or position size if present)
+
+---
+
+## Methodology
+
+### Data Preparation
+
+* Loaded both datasets and inspected structure, missing values, and duplicates.
+* Converted timestamps to a daily format.
+* Merged datasets using the date column.
+* Created key metrics such as:
+
+  * Daily trading activity
+  * Performance metrics (PnL / win rate where available)
+  * Risk indicators (leverage / position size)
+  * Sentiment buckets
+
+### Analysis
 
 The analysis focuses on:
 
-* Performance differences during Fear vs Greed periods
-* Behavioral shifts in leverage, trading frequency, and position sizes
-* Trader segmentation and strategy insights
+1. Performance differences across sentiment regimes
+2. Behavioral changes in trading activity and risk-taking
+3. Segmenting traders based on behavior and consistency
+
+Charts and tables are used to support each finding.
 
 ---
 
-## Dataset
+## Key Questions Answered
 
-1. **Fear & Greed Index**
-
-   * Daily sentiment score (0–100)
-   * Categorized into Fear, Neutral, Greed
-
-2. **Trading Dataset**
-
-   * Timestamp
-   * Trader ID
-   * PnL
-   * Position size
-   * Leverage
-   * Trade side (Long/Short)
+* Does profitability differ during Fear vs Greed markets?
+* Do traders increase risk or activity when sentiment shifts?
+* Which trader segments behave differently across regimes?
 
 ---
 
-## Setup
+## Results
 
-### 1. Clone the repository
+The analysis highlights clear relationships between sentiment and trader behavior, including shifts in activity levels and risk exposure across different market conditions.
 
-```bash
-git clone https://github.com/your-username/trader-sentiment-analysis.git
-cd trader-sentiment-analysis
-```
+---
 
-### 2. Install dependencies
+## Strategy Implications
 
-```bash
-pip install pandas numpy matplotlib scikit-learn
-```
+Findings are translated into actionable rules such as sentiment-aware risk adjustments and segment-based trading strategies.
 
 ---
 
 ## How to Run
 
-Place datasets in the project folder:
+1. Place datasets in the project folder:
 
-* fear_greed_index.csv
-* trades.csv
+   * `fear_greed_index.csv`
+   * `historical_data.csv`
 
-Run the script:
+2. Install dependencies:
+
+```bash
+pip install pandas numpy matplotlib scikit-learn
+```
+
+3. Run the analysis script:
 
 ```bash
 python analysis.py
 ```
-
-Charts will display automatically and metrics will print in the terminal.
-
----
-
-## Project Structure
-
-```
-├── analysis.py
-├── fear_greed_index.csv
-├── trades.csv
-├── README.md
-```
-
----
-
-## Key Outputs
-
-* Performance comparison by sentiment
-* Trader segmentation analysis
-* Behavioral metrics
-* Strategy recommendations
-* Profitability prediction model (optional)
 
 ---
 
@@ -91,3 +102,9 @@ Charts will display automatically and metrics will print in the terminal.
 * Pandas
 * Matplotlib
 * Scikit-learn
+
+---
+
+## Outcome
+
+This project demonstrates how sentiment-driven insights can improve trading strategy design by linking market psychology to measurable behavior and performance metrics.
