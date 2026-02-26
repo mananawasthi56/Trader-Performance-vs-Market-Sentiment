@@ -1,47 +1,41 @@
-## Methodology
+## Summary: Sentiment-Driven Trader Behavior on Hyperliquid
 
-The analysis integrates daily market sentiment data with individual trade records.
-First, timestamps were converted to a daily level to align both datasets.
-Key metrics such as daily PnL, win rate, trade frequency, leverage usage, and position size were computed.
+### Methodology
 
-Sentiment scores were bucketed into:
+This study combines market sentiment data with historical trading activity to examine how trader performance and behavior vary across different sentiment regimes.
 
-* Fear (0–40)
-* Neutral (40–60)
-* Greed (60–100)
+The datasets were first cleaned and aligned at a daily level.
+Sentiment scores were categorized into Fear, Neutral, and Greed regimes.
+Key metrics such as trading activity, performance indicators, and risk measures were then computed and compared across these regimes.
 
-Trader behavior and performance were then compared across these sentiment regimes.
-Additionally, traders were segmented by leverage usage, trading frequency, and performance consistency to identify behavioral patterns.
+Additionally, traders were segmented based on behavioral characteristics such as activity levels and risk exposure to identify differences in performance patterns.
 
 ---
 
-## Key Insights
+### Key Insights
 
-1. **Performance varies with sentiment**
-   Average PnL and win rate show noticeable differences across Fear and Greed periods, indicating that market psychology influences profitability.
+1. **Performance varies across sentiment regimes**
+   Profitability and win rate show measurable differences between Fear and Greed periods, indicating that market psychology plays a role in trading outcomes.
 
-2. **Behavior shifts in Greed periods**
-   Trading frequency and leverage usage tend to increase during higher sentiment periods, suggesting more risk-taking behavior.
+2. **Risk appetite increases during Greed periods**
+   Traders tend to exhibit higher activity levels and greater risk exposure when sentiment is positive, suggesting more aggressive trading behavior.
 
-3. **High-leverage traders show higher variability**
-   While they may achieve higher returns, their PnL dispersion is larger, indicating higher risk exposure.
-
----
-
-## Strategy Recommendations
-
-1. **Risk control during Fear markets**
-   Reducing leverage during Fear periods can help manage drawdowns as volatility and uncertainty increase.
-
-2. **Selective aggression during Greed markets**
-   Higher trade frequency should be limited to traders with historically high win rates, as overtrading can reduce returns for inconsistent performers.
-
-3. **Segment-based risk limits**
-   Applying different leverage caps based on trader consistency can improve overall risk-adjusted performance.
+3. **Behavioral segmentation reveals uneven outcomes**
+   High-risk or highly active traders demonstrate greater variability in performance, while more consistent traders show stable outcomes across regimes.
 
 ---
 
-## Conclusion
+### Strategy Recommendations
 
-The study demonstrates that trader behavior is strongly linked to market sentiment.
-Incorporating sentiment-aware risk management and segment-based strategies can improve both stability and profitability.
+1. **Sentiment-aware risk management**
+   Reduce leverage and exposure during Fear regimes to mitigate drawdowns and volatility risk.
+
+2. **Selective participation during Greed regimes**
+   Increase trading activity only for historically consistent performers to avoid overtrading risk.
+
+---
+
+### Conclusion
+
+The analysis confirms that trader behavior and performance are closely linked to market sentiment.
+Incorporating sentiment indicators into trading strategies can improve decision-making, enhance risk control, and lead to more robust trading outcomes.
