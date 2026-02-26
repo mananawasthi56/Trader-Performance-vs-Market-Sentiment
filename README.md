@@ -94,6 +94,9 @@ pip install pandas numpy matplotlib scikit-learn
 python analysis.py
 ```
 
+
+pip install streamlit pandas numpy matplotlib scikit-learn
+streamlit run app.py
 ---
 
 ## Tools Used
